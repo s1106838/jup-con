@@ -1,9 +1,8 @@
 # use a node base image
-FROM pegasystems/pega:8.3
+FROM getwarped/s2i-minimal-notebook
 
 # set maintainer
-LABEL maintainer "wouter"
+LABEL maintainer "bas"
 
-# copy
-COPY server.xml /usr/local/tomcat/conf/
-#COPY context.xml /opt/pega/config/context.xml
+RUN pip install --upgrade pip && 
+    pip install pandas
