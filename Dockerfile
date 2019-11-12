@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub
+FROM s2i-minimal-notebook:3.5
 
 RUN apt-get update && apt-get install -y curl
 RUN pip install pip
