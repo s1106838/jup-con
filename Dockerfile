@@ -3,6 +3,7 @@ FROM s2i-minimal-notebook:3.5
 #RUN apt-get update && apt-get install -y curl
 #RUN pip install pip
 #geïnstalleerde packages
+RUN pip install pip
 RUN pip install pandas
 #RUN pip install jupyterhub-ldapauthenticator
 #RUN pip install git+git://github.com/danielfrg/jupyterhub-kubernetes_spawner.git
