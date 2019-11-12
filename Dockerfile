@@ -1,7 +1,7 @@
 FROM s2i-minimal-notebook:3.5
 
-RUN apt-get update && apt-get install -y curl
-RUN pip install pip
+#RUN apt-get update && apt-get install -y curl
+#RUN pip install pip
 #geïnstalleerde packages
 RUN pip install pandas
 #RUN pip install jupyterhub-ldapauthenticator
