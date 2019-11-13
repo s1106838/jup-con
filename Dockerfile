@@ -15,21 +15,21 @@ RUN npm install -g n
 RUN n stable
 
 #test
-RUN pip install --upgrade jupyterlab-git
-RUN jupyter lab build
+#RUN pip install --upgrade jupyterlab-git
+#RUN jupyter lab build
 
 
 
 
 # Clone the repo to your local environment
-#RUN git clone https://github.com/jupyterlab/jupyterlab-git.git
-#RUN cd jupyterlab-git
-# Install JupyterLab
-#RUN pip install jupyterlab
+RUN git clone https://github.com/jupyterlab/jupyterlab-git.git
+RUN cd jupyterlab-git
+ Install JupyterLab
+RUN pip install jupyterlab
 # Install Javascript dependencies
-#RUN jlpm install
+RUN jlpm install
 # Install the server extension in development mode
-#RUN pip install -e .[test]
-#RUN jupyter serverextension enable --py jupyterlab_git
+RUN pip install -e .[test]
+RUN jupyter serverextension enable --py jupyterlab_git
 # Link your development version of the extension with JupyterLab
-#RUN jupyter labextension link .
+RUN jupyter labextension link .
