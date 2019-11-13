@@ -19,7 +19,10 @@ RUN n stable
 RUN pip install --upgrade jupyterlab-git
 #RUN jupyter lab build
 
-
-RUN jupyter serverextension enable --py jupyterlab_git
+RUN jupyter labextension install @jupyterlab/git@^0.5.0 && \
+    npm cache clean --force && \
+    rm -rf $CONDA_DIR/share/jupyter/lab/staging
+    
+#RUN jupyter serverextension enable --py jupyterlab_git
 # Link your development version of the extension with JupyterLab
 #RUN jupyter labextension link .
