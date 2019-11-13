@@ -11,7 +11,8 @@ RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-e
 RUN yum install -y nodejs
 
 #test
-RUN pip install jupyterlab_github
+RUN pip install --upgrade jupyterlab-git
+RUN jupyter lab build
 
 
 # Clone the repo to your local environment
