@@ -10,7 +10,7 @@ RUN pip install pandas
 #installeer git
 #jupyter labextension install @jupyterlab/git
 #pip install --upgrade jupyterlab-git
-jupyter serverextension enable --py jupyterlab_git
+#jupyter serverextension enable --py jupyterlab_git
 
 #kopieer de configuratie
 #COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
