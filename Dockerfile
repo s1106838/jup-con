@@ -10,6 +10,7 @@ USER 0
 RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
 RUN yum install -y nodejs
 
+#upgrade nodejs
 RUN npm cache clean -f
 RUN npm install -g n
 RUN n stable
