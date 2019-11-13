@@ -5,7 +5,7 @@ FROM quay.io/jupyteronopenshift/s2i-minimal-notebook-py36:2.4.0
 #geïnstalleerde packages
 RUN pip install pip
 RUN pip install pandas
-#RUN pip install jupyterhub-ldapauthenticator
+RUN pip install jupyterhub-ldapauthenticator
 #RUN pip install git+git://github.com/danielfrg/jupyterhub-kubernetes_spawner.git
 #installeer git
 #jupyter labextension install @jupyterlab/git
