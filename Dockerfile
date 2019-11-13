@@ -9,11 +9,16 @@ USER 0
 # install dep
 RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
 RUN yum install -y nodejs
-RUN yum upgrade -y
+
+RUN npm cache clean -f
+RUN npm install -g n
+RUN n stable
 
 #test
 RUN pip install --upgrade jupyterlab-git
 RUN jupyter lab build
+
+
 
 
 # Clone the repo to your local environment
