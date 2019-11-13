@@ -7,7 +7,5 @@ RUN pip install pip
 RUN pip install pandas
 
 
-#test
-RUN pip install --upgrade jupyterlab-git
-#RUN jupyter lab build
+RUN jupyter labextension install @jupyterlab/github
 
