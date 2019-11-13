@@ -5,16 +5,18 @@ FROM quay.io/jupyteronopenshift/s2i-minimal-notebook-py36:2.4.0
 #geïnstalleerde packages
 RUN pip install pip
 RUN pip install pandas
-RUN pip install --upgrade jupyterlab-git
-#RUN jupyter lab build
-#RUN pip install jupyterhub-ldapauthenticator
-#RUN pip install git+git://github.com/danielfrg/jupyterhub-kubernetes_spawner.git
-#installeer git
-#jupyter labextension install @jupyterlab/git
-#pip install --upgrade jupyterlab-git
-#jupyter serverextension enable --py jupyterlab_git
 
-#kopieer de configuratie
-#COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
+# Clone the repo to your local environment
+RUN git clone https://github.com/jupyterlab/jupyterlab-git.git
+RUN cd jupyterlab-git
+# Install JupyterLab
+RUN pip install jupyterlab
+# Install Javascript dependencies
+RUN jlpm install
+# Install the server extension in development mode
+RUN pip install -e .[test]
+RUN jupyter serverextension enable --py jupyterlab_git
+# Link your development version of the extension with JupyterLab
+RUN jupyter labextension link .
 
