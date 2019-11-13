@@ -15,7 +15,7 @@ RUN npm install -g n
 RUN n stable
 
 #test
-#RUN pip install --upgrade jupyterlab-git
+RUN pip install --upgrade jupyterlab-git
 #RUN jupyter lab build
 
 
