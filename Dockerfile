@@ -10,13 +10,17 @@ USER 0
 RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
 RUN yum install -y nodejs
 
+#test
+RUN pip install jupyterlab_github
+
+
 # Clone the repo to your local environment
-RUN git clone https://github.com/jupyterlab/jupyterlab-git.git
-RUN cd jupyterlab-git
+#RUN git clone https://github.com/jupyterlab/jupyterlab-git.git
+#RUN cd jupyterlab-git
 # Install JupyterLab
-RUN pip install jupyterlab
+#RUN pip install jupyterlab
 # Install Javascript dependencies
-RUN jlpm install
+#RUN jlpm install
 # Install the server extension in development mode
 #RUN pip install -e .[test]
 #RUN jupyter serverextension enable --py jupyterlab_git
