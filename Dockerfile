@@ -19,6 +19,6 @@ RUN pip install jupyterlab
 RUN jlpm install
 # Install the server extension in development mode
 #RUN pip install -e .[test]
-RUN jupyter serverextension enable --py jupyterlab_git
+#RUN jupyter serverextension enable --py jupyterlab_git
 # Link your development version of the extension with JupyterLab
-RUN jupyter labextension link .
+#RUN jupyter labextension link .
