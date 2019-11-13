@@ -7,6 +7,12 @@ RUN pip install pip
 RUN pip install pandas
 
 
+# install node4+ en npm 4+
+RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
+RUN yum install nodejs
+RUN curl -sL https://rpm.nodesource.com/setup_7.x | bash -
+RUN yum install nodejs
+
 # Clone the repo to your local environment
 RUN git clone https://github.com/jupyterlab/jupyterlab-git.git
 RUN cd jupyterlab-git
