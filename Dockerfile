@@ -21,4 +21,4 @@ RUN pip install --upgrade jupyterlab-git
 
 RUN jupyter serverextension enable --py jupyterlab_git
 # Link your development version of the extension with JupyterLab
-RUN jupyter labextension link .
+#RUN jupyter labextension link .
